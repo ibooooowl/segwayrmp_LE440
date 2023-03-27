@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b979c9dd-55f7-4b5a-a96a-e1805af5bb46" name="Changes" comment="init">
+      <change beforePath="$PROJECT_DIR$/rmp_base/CHANGELOG.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/Doxyfile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/include/Rmp440LE.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/launch/rmp440le.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/mainpage.dox" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/Rmp440LEInterface.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpConfigurationCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpFault.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpHelper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpInterface.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpLogger.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpMessage.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpTransport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpType.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpUdp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpUsb.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/include/RmpUserDefinedFeedbackType.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/src/Rmp440LEInterface.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/src/RmpConfigurationCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/src/RmpFault.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/src/RmpInterface.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/src/RmpLogger.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/src/RmpUdp.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/rmp/src/RmpUsb.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/src/Rmp440LE.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_base/src/rmp_440le_node.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/CHANGELOG.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/launch/display_model.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/launch/rmp440le.rviz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/launch/rmp440le_description.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/meshes/rmp440le/base/base.stl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/meshes/rmp440le/base/base_collision.stl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/meshes/rmp440le/base/wheel.stl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/meshes/rmp440le/base/wheel_collision.stl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/robots/rmp440le.urdf.xacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/rviz_screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/urdf/common.xacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/urdf/materials.urdf.xacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/urdf/rmp440le/base.urdf.xacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_description/urdf/rmp440le/wheel.urdf.xacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_msgs/CHANGELOG.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_msgs/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_msgs/msg/AudioCommand.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_msgs/msg/Battery.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_msgs/msg/BoolStamped.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_msgs/msg/FaultStatus.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_msgs/msg/MotorStatus.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_msgs/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/CHANGELOG.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/Doxyfile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/include/RmpJoystickConverter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/include/RmpXboxConverter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/launch/joystick.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/mainpage.dox" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/src/RmpJoystickConverter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/src/RmpXboxConverter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/src/joy_node.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/src/rmp_teleop_node.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmp_teleop/xbox_controller_usage.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/segwayrmp/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segwayrmp/package.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NbxQYfv4Lyw6TXPu6QSEmZf3oH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/home/user/segwayrmp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b979c9dd-55f7-4b5a-a96a-e1805af5bb46" name="Changes" comment="" />
+      <created>1679946568453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679946568453</updated>
+      <workItem from="1679946569746" duration="420000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+</project>
