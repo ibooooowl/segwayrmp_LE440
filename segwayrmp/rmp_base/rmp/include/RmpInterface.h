@@ -40,7 +40,6 @@
 #define RMP_INTERFACE_H
 
 #include <string>
-
 #include <RmpTransport.h>
 #include <RmpUserDefinedFeedbackType.h>
 #include <RmpConfigurationCommand.h>

@@ -510,7 +510,14 @@ namespace segway
   void RmpInterface::Initialize()
   {
     InitializeFeedbackBitmaps();
-
+    SEGWAY_LOG(INFO, "Initialize feed back bitmap");
+    SEGWAY_LOG(INFO, "Change operational mode");
+    bool resultxx = ChangeOperationalMode(STANDBY_REQUEST);
+    if (!resultxx)
+    {
+      throw std::runtime_error(std::string("Fail to set the rmp in standby mode."));
+    }
+    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
     bool result = ChangeOperationalMode(TRACTOR_REQUEST);
     if (!result)
     {

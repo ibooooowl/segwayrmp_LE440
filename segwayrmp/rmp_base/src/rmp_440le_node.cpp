@@ -45,7 +45,8 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "rmp_440_le_node");
   
   Rmp440LE rmp440LE;
+  ROS_DEBUG_STREAM("Initialize the ros node rmp_440_le_node.");
   rmp440LE.Initialize();
-  
+    ROS_DEBUG_STREAM("Initialize the ros node rmp_440_le_node.---ok");
   return 0;
 }

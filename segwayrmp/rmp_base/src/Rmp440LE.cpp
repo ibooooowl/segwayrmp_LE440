@@ -134,6 +134,7 @@ void Rmp440LE::Initialize()
     ros::Duration(2.0).sleep();
 
     // Reset wheel encoders
+    ROS_DEBUG_STREAM("Reset wheel encoder: " << segway::RESET_ALL_POSITION_DATA);
     bool integratorsReset = m_Rmp440LEInterface.ResetIntegrators(segway::RESET_ALL_POSITION_DATA);
 
     if (!integratorsReset)
@@ -142,12 +143,15 @@ void Rmp440LE::Initialize()
     }
     else
     {
+      ROS_DEBUG_STREAM("Reset wheel encoder---ok");
       m_Rmp440LEInterface.SetConfiguration(segway::RmpConfigurationCommandSet::SET_AUDIO_COMMAND, static_cast<uint32_t>(segway::MOTOR_AUDIO_TEST_SWEEP));
     }
 
     ros::Duration(2.0).sleep();
 
     // Set the max speeds
+    ROS_DEBUG_STREAM("Set the max speeds: " << segway::RmpConfigurationCommandSet::SET_MAXIMUM_VELOCITY);
+    ROS_DEBUG_STREAM("Set the max turn rate: " << segway::RmpConfigurationCommandSet::SET_MAXIMUM_TURN_RATE);
     bool maxSpeedSet = m_Rmp440LEInterface.SetConfiguration(segway::RmpConfigurationCommandSet::SET_MAXIMUM_VELOCITY, static_cast<float>(maxTranslationalVelocity));
     maxSpeedSet = maxSpeedSet && m_Rmp440LEInterface.SetConfiguration(segway::RmpConfigurationCommandSet::SET_MAXIMUM_TURN_RATE, static_cast<float>(maxTurnRate));
 
@@ -157,7 +161,10 @@ void Rmp440LE::Initialize()
     }
     else
     {
+      ROS_DEBUG_STREAM("Set the max speeds---ok");
+      ROS_DEBUG_STREAM("Set the max turn rate---ok");
       m_Rmp440LEInterface.SetConfiguration(segway::RmpConfigurationCommandSet::SET_AUDIO_COMMAND, static_cast<uint32_t>(segway::MOTOR_AUDIO_TEST_SWEEP));
+
     }
 
     // Set up ROS communication
@@ -180,10 +187,14 @@ void Rmp440LE::Initialize()
     {
       updateFrequency = UPDATE_FREQUENCY_MAX;
     }
-    
-    ros::Rate rate(updateFrequency);
 
+    ROS_DEBUG_STREAM("Set update Frequency:" << updateFrequency);
+    ros::Rate rate(updateFrequency);
+    ROS_DEBUG_STREAM("Set update Frequency---ok");
+
+    ROS_DEBUG_STREAM("Initialize messages.");
     InitializeMessages();
+    ROS_DEBUG_STREAM("Initialize messages---ok");
 
     ros::Time lastUpdate = ros::Time::now();
     ros::Duration maxUpdatePeriod(MAX_UPDATE_PERIOD);
@@ -277,6 +288,8 @@ void Rmp440LE::ProcessVelocityCommand(const geometry_msgs::TwistStamped::ConstPt
   float maximumVelocity = m_Rmp440LEInterface.GetMaximumVelocity();
   float maximumTurnRate = m_Rmp440LEInterface.GetMaximumTurnRate();
 
+  ROS_DEBUG_STREAM("max velocity:" << maximumVelocity << ", max turn rate:" << maximumTurnRate);
+  ROS_DEBUG_STREAM("velocity:" << rpVelocityCommand->twist.linear.x << ", max turn rate:" << rpVelocityCommand->twist.angular.z);
   if ((maximumVelocity <= 0.0) || (maximumTurnRate <= 0))
   {
     std::stringstream stringStream;
@@ -325,6 +338,7 @@ void Rmp440LE::UpdateStatus()
   UpdateBattery();
   UpdateMotorStatus();
   UpdateFaultStatus();
+  ROS_DEBUG_STREAM("status updated!");
 }
 
 void Rmp440LE::UpdateImu()
