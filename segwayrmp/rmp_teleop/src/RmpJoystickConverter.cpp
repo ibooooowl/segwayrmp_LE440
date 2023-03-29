@@ -38,6 +38,7 @@
 
 #include <RmpJoystickConverter.h>
 #include <RmpXboxConverter.h>
+#include <RmpLogitechConverter.h>
 
 #include <exception>
 
@@ -48,6 +49,10 @@ JoystickConverter::Ptr JoystickConverter::Create(JoystickType joystickType)
     case XBOX_WIRELLESS:
     {
       return JoystickConverter::Ptr(new XboxWirelessConverter());
+    }
+    case LOGITECH_WIRELLESS:
+    {
+      return JoystickConverter::Ptr(new LogitechWirelessConverter());
     }
     default:
     {

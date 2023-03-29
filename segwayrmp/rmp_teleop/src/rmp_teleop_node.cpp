@@ -156,7 +156,7 @@ void RmpTeleop::Initialize()
   m_NodeHandle.param("translational_velocity_boost_scale", m_TranslationalVelocityBoostScale, 8.0);
   m_NodeHandle.param("rotational_velocity_boost_scale", m_RotationalVelocityBoostScale, 4.4);
 
-  m_pJoystickConverter = JoystickConverter::Create(JoystickConverter::XBOX_WIRELLESS);
+  m_pJoystickConverter = JoystickConverter::Create(JoystickConverter::LOGITECH_WIRELLESS);
 
   // Set up ROS communication
   m_VelocityCommandPublisher = m_NodeHandle.advertise<geometry_msgs::TwistStamped>(velocityCommandTopic, 1);

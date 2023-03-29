@@ -12,9 +12,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b979c9dd-55f7-4b5a-a96a-e1805af5bb46" name="Changes" comment="add log">
+    <list default="true" id="b979c9dd-55f7-4b5a-a96a-e1805af5bb46" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/include/RmpLogitechConverter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/RmpLogitechConverter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_base/src/Rmp440LE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_base/src/Rmp440LE.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/include/RmpJoystickConverter.h" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/include/RmpJoystickConverter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/RmpJoystickConverter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/RmpJoystickConverter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/rmp_teleop_node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/rmp_teleop_node.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,28 +35,34 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NbxQYfv4Lyw6TXPu6QSEmZf3oH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/user/rtmaps-ros-bridge&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/home/user/segwayrmp_LE440/segwayrmp/rmp_teleop/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/segwayrmp/rmp_teleop/src" />
+      <recent name="$PROJECT_DIR$/segwayrmp/rmp_teleop/include" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,32 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679946568453</updated>
       <workItem from="1679946569746" duration="420000" />
-      <workItem from="1679947040144" duration="1356000" />
-      <workItem from="1680007367742" duration="599000" />
-      <workItem from="1680024349570" duration="7858000" />
     </task>
-    <task id="LOCAL-00001" summary="add log">
-      <created>1680047234200</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1680047234200</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add log">
-      <created>1680048010151</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1680048010151</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add log">
-      <created>1680048348123</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1680048348123</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,7 +80,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <MESSAGE value="add log" />
-    <option name="LAST_COMMIT_MESSAGE" value="add log" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

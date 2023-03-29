@@ -36,76 +36,80 @@
   CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
 */
 
-#ifndef RMP_JOYSTICK_CONVERTER_H
-#define RMP_JOYSTICK_CONVERTER_H
+#ifndef RMP_LOGITECHCONVERTER_H
+#define RMP_LOGITECH_CONVERTER_H
 
-#include <sensor_msgs/Joy.h>
-
-#include <memory>
+#include <RmpJoystickConverter.h>
 
 /**
- * This class is an abstract base class.
- * It converts joystick messages to Rmp commands.
+ * This class converts Xbox controller input to Rmp commands.
  */
-class JoystickConverter
+class LogitechWirelessConverter : public JoystickConverter
 {
 public:
-  typedef std::shared_ptr<JoystickConverter> Ptr;
-
   /**
-   * Define Joystick Type(s)
+   * Constructor
    */
-  enum JoystickType
-  {
-    XBOX_WIRELLESS,
-    LOGITECH_WIRELLESS
-  };
-
-  /**
-   * Create a joystick converter
-   */
-  static Ptr Create(JoystickType joystickType);
+  LogitechWirelessConverter();
 
   /**
    * Destructor
    */
-  virtual ~JoystickConverter()
-  {}
+  virtual ~LogitechWirelessConverter();
 
   /**
    * Get the translational velocity reading
    * @param rJoyMessage joystick message
    * @result axe/button reading
+   * @copydetails LogitechWirelessConverter_IsValid_throw
    */
-  virtual double GetTranslationalVelocity(const sensor_msgs::Joy& rJoyMessage) = 0;
+  virtual double GetTranslationalVelocity(const sensor_msgs::Joy& rJoyMessage);
 
   /**
    * Get the rotational velocity reading
    * @param rJoyMessage joystick message
    * @result axe/button reading
+   * @copydetails LogitechWirelessConverter_IsValid_throw
    */
-  virtual double GetRotationalVelocity(const sensor_msgs::Joy& rJoyMessage) = 0;
+  virtual double GetRotationalVelocity(const sensor_msgs::Joy& rJoyMessage);
 
   /**
    * Get wether the deadman button is pressed
    * @param rJoyMessage joystick message
    * @result wether the button is pressed
+   * @copydetails LogitechWirelessConverter_IsValid_throw
    */
-  virtual bool GetDeadman(const sensor_msgs::Joy& rJoyMessage) = 0;
+  virtual bool GetDeadman(const sensor_msgs::Joy& rJoyMessage);
 
   /**
    * Get wether the boost button is pressed
    * @param rJoyMessage joystick message
    * @result wether the button is pressed
+   * @copydetails LogitechWirelessConverter_IsValid_throw
    */
-  virtual bool GetBoost(const sensor_msgs::Joy& rJoyMessage) = 0;
+  virtual bool GetBoost(const sensor_msgs::Joy& rJoyMessage);
 
   /**
    * Get audio command
    * @param rJoyMessage joystick message
    * @result return audio command or -1 if no command
+   * @copydetails LogitechWirelessConverter_IsValid_throw
    */
-  virtual int GetAudioCommand(const sensor_msgs::Joy& rJoyMessage) = 0;
-}; // class JoystickConverter
+  virtual int GetAudioCommand(const sensor_msgs::Joy& rJoyMessage);
 
-#endif // RMP_JOYSTICK_CONVERTER_H
+private:
+  /**
+   * @defgroup LogitechWirelessConverter_IsValid_throw ExceptionTitle
+   * @throw std::logic_error
+   * if rJoyMessage does not match the Logitech wireless joystick message specifications
+   */
+  
+  /**
+   * Wether the joystick message is valid
+   * throw an exception otherwise
+   * @copydetails LogitechWirelessConverter_IsValid_throw
+   */
+  void IsValid(const sensor_msgs::Joy& rJoyMessage);
+}; // class LogitechWirelessConverter
+
+#endif // RMP_LOGITECH_CONVERTER_H
