@@ -98,6 +98,7 @@ namespace segway
       m_Shift = rOther.m_Shift;
       m_Mask = rOther.m_Mask;
       m_Group = rOther.m_Group;
+      return *this;
     }
 
     /**

@@ -510,8 +510,7 @@ namespace segway
   void RmpInterface::Initialize()
   {
     InitializeFeedbackBitmaps();
-    SEGWAY_LOG(INFO, "Initialize feed back bitmap");
-    SEGWAY_LOG(INFO, "Change operational mode");
+    SEGWAY_LOG(INFO, "Initialize feed back bitmap" << " and Change operational mode" <<  TRACTOR_REQUEST << " to tractor mode");
     bool resultxx = ChangeOperationalMode(STANDBY_REQUEST);
     if (!resultxx)
     {

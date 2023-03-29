@@ -12,12 +12,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b979c9dd-55f7-4b5a-a96a-e1805af5bb46" name="Changes" comment="init">
+    <list default="true" id="b979c9dd-55f7-4b5a-a96a-e1805af5bb46" name="Changes" comment="add log">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_base/rmp/include/RmpInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_base/rmp/include/RmpInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_base/rmp/include/RmpFault.h" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_base/rmp/include/RmpFault.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_base/rmp/src/RmpInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_base/rmp/src/RmpInterface.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_base/src/Rmp440LE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_base/src/Rmp440LE.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_base/src/rmp_440le_node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_base/src/rmp_440le_node.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +66,16 @@
       <workItem from="1679946569746" duration="420000" />
       <workItem from="1679947040144" duration="1356000" />
       <workItem from="1680007367742" duration="599000" />
-      <workItem from="1680024349570" duration="6112000" />
+      <workItem from="1680024349570" duration="6896000" />
     </task>
+    <task id="LOCAL-00001" summary="add log">
+      <created>1680047234200</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680047234200</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="add log" />
+    <option name="LAST_COMMIT_MESSAGE" value="add log" />
   </component>
 </project>
