@@ -45,7 +45,7 @@
 #include <tf/transform_datatypes.h>
 #include <rmp_msgs/MotorStatus.h>
 #include <rmp_msgs/Battery.h>
-
+#include <RmpLogger.h>
 #include <RmpConfigurationCommand.h>
 
 // Constant definitions
@@ -71,6 +71,9 @@ Rmp440LE::Rmp440LE()
   : m_NodeHandle("~")
   , m_OdometryInitialized(false)
 {
+    Logger::SetMinLogLevel(INFO);
+    Logger::AddLogFile(std::string("rmp_interface_440le.log"));
+    Logger::AddOutputStream(std::cout);
 }
 
 Rmp440LE::~Rmp440LE()
@@ -134,7 +137,7 @@ void Rmp440LE::Initialize()
     ros::Duration(2.0).sleep();
 
     // Reset wheel encoders
-    //ROS_DEBUG_STREAM("Reset wheel encoder: " << segway::RESET_ALL_POSITION_DATA);
+    SEGWAY_LOG(INFO, "Reset wheel encoder: " << segway::RESET_ALL_POSITION_DATA);
     bool integratorsReset = m_Rmp440LEInterface.ResetIntegrators(segway::RESET_ALL_POSITION_DATA);
 
     if (!integratorsReset)
@@ -143,15 +146,15 @@ void Rmp440LE::Initialize()
     }
     else
     {
-      //ROS_DEBUG_STREAM("Reset wheel encoder:" << segway::RESET_ALL_POSITION_DATA <<  "---ok");
+        SEGWAY_LOG(INFO,"Reset wheel encoder:" << segway::RESET_ALL_POSITION_DATA <<  "---ok");
       m_Rmp440LEInterface.SetConfiguration(segway::RmpConfigurationCommandSet::SET_AUDIO_COMMAND, static_cast<uint32_t>(segway::MOTOR_AUDIO_TEST_SWEEP));
     }
 
     ros::Duration(2.0).sleep();
 
     // Set the max speeds
-    //ROS_DEBUG_STREAM("Set the max speeds: " << segway::RmpConfigurationCommandSet::SET_MAXIMUM_VELOCITY);
-    //ROS_DEBUG_STREAM("Set the max turn rate: " << segway::RmpConfigurationCommandSet::SET_MAXIMUM_TURN_RATE);
+      SEGWAY_LOG(INFO,"Set the max speeds: " << segway::RmpConfigurationCommandSet::SET_MAXIMUM_VELOCITY);
+      SEGWAY_LOG(INFO,"Set the max turn rate: " << segway::RmpConfigurationCommandSet::SET_MAXIMUM_TURN_RATE);
     bool maxSpeedSet = m_Rmp440LEInterface.SetConfiguration(segway::RmpConfigurationCommandSet::SET_MAXIMUM_VELOCITY, static_cast<float>(maxTranslationalVelocity));
     maxSpeedSet = maxSpeedSet && m_Rmp440LEInterface.SetConfiguration(segway::RmpConfigurationCommandSet::SET_MAXIMUM_TURN_RATE, static_cast<float>(maxTurnRate));
 
@@ -161,8 +164,8 @@ void Rmp440LE::Initialize()
     }
     else
     {
-      //ROS_DEBUG_STREAM("Set the max speeds:" << segway::RmpConfigurationCommandSet::SET_MAXIMUM_VELOCITY<< "---ok");
-      //ROS_DEBUG_STREAM("Set the max turn rate:"<< segway::RmpConfigurationCommandSet::SET_MAXIMUM_TURN_RATE <<"---ok");
+        SEGWAY_LOG(INFO,"Set the max speeds:" << segway::RmpConfigurationCommandSet::SET_MAXIMUM_VELOCITY<< "---ok");
+        SEGWAY_LOG(INFO,"Set the max turn rate:"<< segway::RmpConfigurationCommandSet::SET_MAXIMUM_TURN_RATE <<"---ok");
       m_Rmp440LEInterface.SetConfiguration(segway::RmpConfigurationCommandSet::SET_AUDIO_COMMAND, static_cast<uint32_t>(segway::MOTOR_AUDIO_TEST_SWEEP));
 
     }
@@ -188,9 +191,9 @@ void Rmp440LE::Initialize()
       updateFrequency = UPDATE_FREQUENCY_MAX;
     }
 
-    //ROS_DEBUG_STREAM("Set update Frequency:" << updateFrequency);
+      SEGWAY_LOG(INFO,"Set update Frequency:" << updateFrequency);
     ros::Rate rate(updateFrequency);
-    //ROS_DEBUG_STREAM("Set update Frequency:" << updateFrequency<< " ---ok");
+      SEGWAY_LOG(INFO,"Set update Frequency:" << updateFrequency<< " ---ok");
 
     //ROS_DEBUG_STREAM("Initialize messages.") ;
     InitializeMessages();
@@ -288,8 +291,8 @@ void Rmp440LE::ProcessVelocityCommand(const geometry_msgs::TwistStamped::ConstPt
   float maximumVelocity = m_Rmp440LEInterface.GetMaximumVelocity();
   float maximumTurnRate = m_Rmp440LEInterface.GetMaximumTurnRate();
 
-  //ROS_DEBUG_STREAM("max velocity:" << maximumVelocity << ", max turn rate:" << maximumTurnRate);
-  //ROS_DEBUG_STREAM("velocity:" << rpVelocityCommand->twist.linear.x << ", max turn rate:" << rpVelocityCommand->twist.angular.z);
+    SEGWAY_LOG(INFO,"max velocity:" << maximumVelocity << ", max turn rate:" << maximumTurnRate);
+    SEGWAY_LOG(INFO,"velocity:" << rpVelocityCommand->twist.linear.x << ", max turn rate:" << rpVelocityCommand->twist.angular.z);
   if ((maximumVelocity <= 0.0) || (maximumTurnRate <= 0))
   {
     std::stringstream stringStream;
