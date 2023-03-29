@@ -12,13 +12,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b979c9dd-55f7-4b5a-a96a-e1805af5bb46" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/include/RmpLogitechConverter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/RmpLogitechConverter.cpp" afterDir="false" />
+    <list default="true" id="b979c9dd-55f7-4b5a-a96a-e1805af5bb46" name="Changes" comment="add joystick support for logitech">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/include/RmpJoystickConverter.h" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/include/RmpJoystickConverter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/RmpJoystickConverter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/RmpJoystickConverter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/rmp_teleop_node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/rmp_teleop_node.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/include/RmpLogitechConverter.h" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/include/RmpLogitechConverter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +70,14 @@
       <updated>1679946568453</updated>
       <workItem from="1679946569746" duration="420000" />
     </task>
+    <task id="LOCAL-00001" summary="add joystick support for logitech">
+      <created>1680104561883</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680104561883</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,7 +85,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="add joystick support for logitech" />
+    <option name="LAST_COMMIT_MESSAGE" value="add joystick support for logitech" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

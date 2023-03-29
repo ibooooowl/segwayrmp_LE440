@@ -42,6 +42,7 @@ add_executable(rmp_teleop_node
   src/rmp_teleop_node.cpp
   src/RmpJoystickConverter.cpp
   src/RmpXboxConverter.cpp
+  src/RmpLogitechConverter.cpp
 )
 
 target_link_libraries(rmp_teleop_node
