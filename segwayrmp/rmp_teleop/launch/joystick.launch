@@ -9,7 +9,7 @@
   </node>
 
   <node pkg="rmp_teleop" type="rmp_teleop_node" name="rmp_teleop_node" output="screen" launch-prefix="" >
-    <remap from="joystick_type" value="1"/>
+    <param name="joystick_type" value="0"/>
   </node>
 
 </launch>
