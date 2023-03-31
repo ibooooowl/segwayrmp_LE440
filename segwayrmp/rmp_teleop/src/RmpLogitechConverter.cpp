@@ -77,7 +77,7 @@ bool LogitechWirelessConverter::GetDeadman(const sensor_msgs::Joy& rJoyMessage)
 {
   IsValid(rJoyMessage);
   
-  return (rJoyMessage.buttons[WIRELESS_DEADMAN_IDX] < 0.0);
+  return (rJoyMessage.axes[WIRELESS_DEADMAN_IDX] < -0.5);
 }
 
 bool LogitechWirelessConverter::GetBoost(const sensor_msgs::Joy& rJoyMessage)
