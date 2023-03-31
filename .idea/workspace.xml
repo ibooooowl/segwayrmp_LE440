@@ -14,7 +14,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b979c9dd-55f7-4b5a-a96a-e1805af5bb46" name="Changes" comment="add joystick support for logitech">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/launch/joystick.launch" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/launch/joystick.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/rmp_teleop_node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/segwayrmp/rmp_teleop/src/rmp_teleop_node.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +70,7 @@
       <workItem from="1679946569746" duration="420000" />
       <workItem from="1680166566016" duration="7748000" />
       <workItem from="1680188464190" duration="1111000" />
-      <workItem from="1680271491070" duration="5063000" />
+      <workItem from="1680271491070" duration="5221000" />
     </task>
     <task id="LOCAL-00001" summary="add joystick support for logitech">
       <created>1680104561883</created>
@@ -87,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680105407735</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add joystick support for logitech">
+      <created>1680276563291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680276563291</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
