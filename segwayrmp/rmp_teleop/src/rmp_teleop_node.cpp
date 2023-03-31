@@ -145,18 +145,28 @@ void RmpTeleop::Initialize()
   // Parameters
   std::string joyMessageTopic, velocityCommandTopic, deadmanTopic, audioCommandTopic;
   double updateFrequency;
+  int joystick_type=0;
 
   m_NodeHandle.param("joy_topic", joyMessageTopic, std::string("/rmp440le/joy"));
   m_NodeHandle.param("velocity_command_topic", velocityCommandTopic, std::string("/rmp440le/base/vel_cmd"));
   m_NodeHandle.param("deadman_topic", deadmanTopic, std::string("/rmp440le/deadman"));
   m_NodeHandle.param("audio_command_topic", audioCommandTopic, std::string("/rmp440le/audio_cmd"));
   m_NodeHandle.param("update_frequency", updateFrequency, 50.0);
+  m_NodeHandle.param("joystick_type", joystick_type, 1);
   m_NodeHandle.param("translational_velocity_scale", m_TranslationalVelocityScale, 2.2352);
   m_NodeHandle.param("rotational_velocity_scale", m_RotationalVelocityScale, 3.0);
   m_NodeHandle.param("translational_velocity_boost_scale", m_TranslationalVelocityBoostScale, 8.0);
   m_NodeHandle.param("rotational_velocity_boost_scale", m_RotationalVelocityBoostScale, 4.4);
 
-  m_pJoystickConverter = JoystickConverter::Create(JoystickConverter::LOGITECH_WIRELLESS);
+  JoystickType joystickType =  XBOX_WIRELLESS;
+  switch (joystick_type) {
+    case 1:
+        joystickType =  LOGITECH_WIRELLESS;
+        break;
+    default:
+        joystickType =  XBOX_WIRELLESS;
+  }
+  m_pJoystickConverter = JoystickConverter::Create(joystickType);
 
   // Set up ROS communication
   m_VelocityCommandPublisher = m_NodeHandle.advertise<geometry_msgs::TwistStamped>(velocityCommandTopic, 1);
