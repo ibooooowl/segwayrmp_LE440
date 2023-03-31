@@ -158,7 +158,7 @@ void RmpTeleop::Initialize()
   m_NodeHandle.param("translational_velocity_boost_scale", m_TranslationalVelocityBoostScale, 8.0);
   m_NodeHandle.param("rotational_velocity_boost_scale", m_RotationalVelocityBoostScale, 4.4);
 
-  JoystickType joystickType =  JoystickConverter::XBOX_WIRELLESS;
+  JoystickConverter::JoystickType joystickType =  JoystickConverter::XBOX_WIRELLESS;
   switch (joystick_type) {
     case 1:
         joystickType =  JoystickConverter::LOGITECH_WIRELLESS;

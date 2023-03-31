@@ -2,13 +2,14 @@
 <launch>
 
   <node pkg="rmp_teleop" type="joy_node" name="joy_node" output="screen" launch-prefix="" >
-    <param name="dev" value="/dev/input/by-id/usb-Logitech_Logitech_Cordless_RumblePad_2-joystick" />
+    <param name="dev" value="/dev/input/js0" />
     <param name="deadzone" value="0.2" />
     <param name="autorepeat_rate" value="50" />
     <remap from="joy" to="/rmp440le/joy"/>
   </node>
 
   <node pkg="rmp_teleop" type="rmp_teleop_node" name="rmp_teleop_node" output="screen" launch-prefix="" >
+    <remap from="joystick_type" value="1"/>
   </node>
 
 </launch>
