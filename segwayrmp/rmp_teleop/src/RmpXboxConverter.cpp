@@ -44,13 +44,13 @@
 
 #include <rmp_msgs/AudioCommand.h>
 
-static const uint32_t WIRELESS_AXES_SIZE = 4;
-static const uint32_t WIRELESS_BUTTONS_SIZE = 17;
-static const uint32_t WIRELESS_TRANSLATIONAL_VELOCITY_IDX = 0;
-static const uint32_t WIRELESS_ROTATIONAL_VELOCITY_IDX = 1;
+static const uint32_t WIRELESS_AXES_SIZE = 8;
+static const uint32_t WIRELESS_BUTTONS_SIZE = 11;
+static const uint32_t WIRELESS_TRANSLATIONAL_VELOCITY_IDX = 3;
+static const uint32_t WIRELESS_ROTATIONAL_VELOCITY_IDX = 2;
 static const uint32_t WIRELESS_DEADMAN_IDX = 0;
-static const uint32_t WIRELESS_BOOST_IDX = 2;
-static const uint32_t WIRELESS_AUDIO_SWEEP_IDX = 3;
+static const uint32_t WIRELESS_BOOST_IDX = 7;
+static const uint32_t WIRELESS_AUDIO_SWEEP_IDX = 6;
 
 XboxWirelessConverter::XboxWirelessConverter()
   : JoystickConverter()
@@ -77,7 +77,7 @@ bool XboxWirelessConverter::GetDeadman(const sensor_msgs::Joy& rJoyMessage)
 {
   IsValid(rJoyMessage);
   
-  return (rJoyMessage.buttons[WIRELESS_DEADMAN_IDX] < 0.0);
+  return (rJoyMessage.axes[WIRELESS_DEADMAN_IDX] < 0.0);
 }
 
 bool XboxWirelessConverter::GetBoost(const sensor_msgs::Joy& rJoyMessage)
